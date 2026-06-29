@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-SPPG Pringsewu Sel 2</title>
+    <meta
+      name="description"
+      content="Portal operasional E-SPPG Pringsewu Sel 2 untuk masuk dan melihat ringkasan layanan."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro" aria-labelledby="site-title">
+        <div class="brand-mark" aria-hidden="true">ES</div>
+        <p class="eyebrow">Portal layanan</p>
+        <h1 id="site-title">E-SPPG Pringsewu Sel 2</h1>
+        <p class="lede">
+          Pintu masuk untuk memantau layanan, jadwal, dan status operasional satuan pelayanan.
+        </p>
+        <div class="status-strip" aria-label="Ringkasan status layanan">
+          <span><strong>24</strong> data layanan</span>
+          <span><strong>6</strong> jadwal aktif</span>
+          <span><strong>3</strong> laporan masuk</span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="form-title">
+        <div id="login-view">
+          <p class="panel-label">Akses pengguna</p>
+          <h2 id="form-title">Masuk ke dashboard</h2>
+          <p class="hint">Gunakan nama dan kata sandi apa saja untuk membuka tampilan demo.</p>
+
+          <form id="login-form" novalidate>
+            <label for="username">Nama pengguna</label>
+            <input id="username" name="username" autocomplete="username" placeholder="operator.sppg" required>
+
+            <label for="password">Kata sandi</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Minimal 4 karakter" required minlength="4">
+
+            <p id="form-error" class="error" role="alert" hidden></p>
+            <button type="submit">Masuk</button>
+          </form>
+        </div>
+
+        <div id="dashboard-view" hidden>
+          <div class="dashboard-top">
+            <div>
+              <p class="panel-label">Dashboard</p>
+              <h2>Selamat datang</h2>
+            </div>
+            <button class="ghost" id="logout-button" type="button">Keluar</button>
+          </div>
+          <p class="hint" id="welcome-copy"></p>
+
+          <div class="task-list" aria-label="Daftar prioritas">
+            <article>
+              <span class="dot ok"></span>
+              <div>
+                <h3>Distribusi pagi</h3>
+                <p>Jadwal sudah siap untuk pengecekan lapangan.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot warn"></span>
+              <div>
+                <h3>Validasi penerima</h3>
+                <p>Beberapa data perlu dikonfirmasi sebelum siang.</p>
+              </div>
+            </article>
+            <article>
+              <span class="dot info"></span>
+              <div>
+                <h3>Laporan harian</h3>
+                <p>Ringkasan aktivitas dapat diperbarui setelah layanan selesai.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
